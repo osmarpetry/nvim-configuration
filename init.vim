@@ -5,15 +5,20 @@ Plug 'cohama/lexima.vim' " Auto close parentheses
 Plug 'dense-analysis/ale' " Lint engine
 Plug 'morhetz/gruvbox' " Theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense engine (like vscode)
-Plug 'roxma/nvim-completion-manager' " Able to select autocomplete with arrow function
+Plug 'ncm2/ncm2' " Able to select autocomplete with arrow function
 Plug 'preservim/nerdtree' " Nerdtree
 Plug 'ryanoasis/vim-devicons' " Nerd fonts
 Plug 'sheerun/vim-polyglot' " Language pack
 Plug 'vim-airline/vim-airline' " Status bar bottm
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim' 
+Plug 'junegunn/fzf.vim' " Fuzy finder
 " Plug 'terryma/vim-multiple-cursors' " Multiline selecets -- I'm not ready to use this yeat
+Plug 'ap/vim-buftabline' " Tabs like VSCode
+Plug 'tveskag/nvim-blame-line' " Git blame inline
 call plug#end()
+
+" Enable nvim-blame-line
+autocmd BufEnter * EnableBlameLine
 
 " Set color scheme
 colorscheme gruvbox
@@ -41,3 +46,9 @@ set shiftwidth=2
 nnoremap <c-n> :NERDTreeToggle<cr>
 " Fuzy search with fzf. Ctrl+P like VSCode
 nnoremap <c-p> :Files<cr>
+" F2 rename variable
+"nnoremap <F2> <Plug>(coc-rename)
+" set hidden is necessery for vim-buftabline. Next two lines is ctrl+tab and
+" shift+tag
+" nnoremap <C-TAB> :bnext<CR>
+" nnoremap <C-TAB> :bprev<CR>
