@@ -42,6 +42,9 @@ set expandtab
 " Two spaces on tab (I think)
 set shiftwidth=2
 
+" Show hidden files Nerdtree
+let NERDTreeShowHidden=1
+
 " Open Nerdtree
 nnoremap <c-n> :NERDTreeToggle<cr>
 " Fuzy search with fzf. Ctrl+P like VSCode
