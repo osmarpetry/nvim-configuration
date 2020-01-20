@@ -45,6 +45,9 @@ set shiftwidth=2
 " Show hidden files Nerdtree
 let NERDTreeShowHidden=1
 
+" Open Nerdtree relative file (should be inside the file, not on nerdtree)
+nnoremap <c-r> :NERDTreeFind<cr>
+
 " Open Nerdtree
 nnoremap <c-n> :NERDTreeToggle<cr>
 " Fuzy search with fzf. Ctrl+P like VSCode
